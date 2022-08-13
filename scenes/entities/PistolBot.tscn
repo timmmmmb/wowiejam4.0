@@ -4,10 +4,12 @@
 [ext_resource path="res://scenes/entities/Entity.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scenes/weapons/StandardWeapon.tscn" type="PackedScene" id=4]
 
-[node name="PistolBot" instance=ExtResource( 2 )]
+[node name="PistolBot" groups=["Enemies"] instance=ExtResource( 2 )]
 script = ExtResource( 1 )
 speed = 30
 weapon = NodePath("StandardWeapon")
+patrol_path = NodePath("")
+attack_delay = 1.0
 
 [node name="StandardWeapon" parent="." index="2" instance=ExtResource( 4 )]
 

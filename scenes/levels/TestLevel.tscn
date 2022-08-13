@@ -424,7 +424,6 @@ position = Vector2( 632.538, 660.406 )
 position = Vector2( 574.119, 254.6 )
 speed = 50
 patrol_path = NodePath("../Path2D")
-attack_delay = 1.0
 
 [node name="Path2D" type="Path2D" parent="."]
 curve = SubResource( 1 )
@@ -442,7 +441,4 @@ current = true
 
 [node name="Companion" parent="." instance=ExtResource( 3 )]
 position = Vector2( -64, 380.167 )
-speed = 100
-vision_range = 300
-max_distance_to_player = 100
 player_path = NodePath("../Player")

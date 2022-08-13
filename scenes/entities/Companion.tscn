@@ -1,10 +1,16 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scenes/entities/Entity.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/entities/Companion.gd" type="Script" id=2]
+[ext_resource path="res://scenes/weapons/StandardWeapon.tscn" type="PackedScene" id=4]
 
 [node name="Companion" instance=ExtResource( 1 )]
 script = ExtResource( 2 )
+speed = 100
+vision_range = 300
+max_distance_to_player = 100
+player_path = NodePath("")
+weapon_path = NodePath("StandardWeapon")
 
 [node name="Label" type="Label" parent="." index="0"]
 margin_left = -35.3494
@@ -12,6 +18,11 @@ margin_top = -49.0791
 margin_right = 36.6506
 margin_bottom = -35.0791
 text = "Companion"
-__meta__ = {
-"_edit_use_anchors_": false
-}
+
+[node name="StandardWeapon" parent="." index="3" instance=ExtResource( 4 )]
+delay = 0.0
+
+[node name="Timer" type="Timer" parent="." index="4"]
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

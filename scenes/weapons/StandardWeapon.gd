@@ -11,7 +11,7 @@ func _ready() -> void:
 
 	
 func shoot() -> void:
-	if !$Delay.is_stopped() || disable_shooting:
+	if !$Delay.is_stopped() or disable_shooting:
 		return
 	spawn_bullet()
 	$Delay.start(0)
