@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scenes/entities/PistolBot.tscn" type="PackedScene" id=1]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 346.816, 198.933, 0, 0, 0, 0, 346.816, 503.337, 0, 0, 0, 0, 724.379, 503.337, 0, 0, 0, 0, 724.146, 198.248, 0, 0, 0, 0, 346.816, 198.933 )
+}
+
+[node name="TestLevel" type="Node2D"]
+
+[node name="PistolBot" parent="." instance=ExtResource( 1 )]
+position = Vector2( 498.393, 318.218 )
+patrol_path = NodePath("../Path2D")
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource( 1 )

@@ -8,15 +8,37 @@
 
 config_version=4
 
-_global_script_classes=[  ]
+_global_script_classes=[ {
+"base": "Area2D",
+"class": "Bullet",
+"language": "GDScript",
+"path": "res://scenes/projectiles/Bullet.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Entity",
+"language": "GDScript",
+"path": "res://scenes/entities/Entity.gd"
+}, {
+"base": "Node2D",
+"class": "Weapon",
+"language": "GDScript",
+"path": "res://scenes/weapons/StandardWeapon.gd"
+} ]
 _global_script_class_icons={
-
+"Bullet": "",
+"Entity": "",
+"Weapon": ""
 }
 
 [application]
 
 config/name="Wowiejam 4 . 0"
+run/main_scene="res://scenes/levels/TestLevel.tscn"
 config/icon="res://icon.png"
+
+[gdnative]
+
+singletons=[  ]
 
 [rendering]
 
