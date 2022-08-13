@@ -1,4 +1,5 @@
 extends Entity
+class_name Player
 
 func _physics_process(_delta: float) -> void:
 	var left = Input.is_action_pressed("left")
