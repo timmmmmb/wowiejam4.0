@@ -13,7 +13,7 @@ var entity: Entity
 func _ready() -> void:
 	entity = get_node(entity_path)
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	var max_total = entity.max_health + entity.max_shield
 	var max_width = background_rect.rect_size.x
 

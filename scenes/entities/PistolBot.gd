@@ -5,7 +5,7 @@ var state = STATE.IDLE
 export (NodePath) var patrol_path
 var patrol_points
 var patrol_index = 0
-export(float) var attack_delay = 1
+export var attack_delay = 1.0
 export var vision_range = 300
 var enemies: Array
 

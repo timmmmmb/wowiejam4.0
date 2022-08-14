@@ -2,7 +2,7 @@ extends Node2D
 class_name Weapon
 
 export(PackedScene) var Projectile = preload("res://scenes/projectiles/Bullet.tscn")
-export(float) var delay = 1
+export var delay = 1.0
 export var damage = 1
 var disable_shooting = false
 
