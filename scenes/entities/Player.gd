@@ -31,6 +31,8 @@ func move(_delta: float) -> void:
 	
 	if velocity.x == 0 && velocity.y == 0 :
 		$AnimatedSprite.animation = "default"
+	elif !$Footsteps.playing:
+		$Footsteps.play()
 	
 	move_and_collide(velocity * _delta)
 

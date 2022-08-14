@@ -68,6 +68,8 @@ func move(target) -> void:
 			$AnimatedSprite.animation = "down"
 		else:
 			$AnimatedSprite.animation = "up"
+	if !$Footsteps.playing:
+		$Footsteps.play()
 
 
 func behaviour():

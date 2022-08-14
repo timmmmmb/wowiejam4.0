@@ -35,6 +35,9 @@ func _physics_process(_delta: float) -> void:
 				$AnimatedSprite.animation = "up"
 	else:
 		$AnimatedSprite.animation = "default"
+	
+	if !$Footsteps.playing && $AnimatedSprite.animation != 'default':
+		$Footsteps.play()
 
 func get_nearest_enemy() -> Node2D:
 	var nearest_distance = INF

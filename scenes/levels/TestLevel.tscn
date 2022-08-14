@@ -1,4 +1,4 @@
-[gd_scene load_steps=38 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://scenes/entities/PistolBot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/entities/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://scenes/HealthBar.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/Lights/GreenElevatorLight.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/entities/MGBot.tscn" type="PackedScene" id=9]
+[ext_resource path="res://assets/Sounds/bgm/bouncing_helper.wav" type="AudioStream" id=10]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -561,6 +562,12 @@ position = Vector2( 0, 30 )
 scale = Vector2( 2, 2 )
 entity_path = NodePath("../../../Companion")
 
+[node name="BGM" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2( 1058.63, -223.991 )
+stream = ExtResource( 10 )
+volume_db = -10.0
+autoplay = true
+
 [node name="Companion" parent="." instance=ExtResource( 3 )]
 position = Vector2( -1185.97, 223.991 )
 player_path = NodePath("../Player")
@@ -586,6 +593,3 @@ patrol_path = NodePath("../Path2D2")
 
 [node name="Path2D2" type="Path2D" parent="."]
 curve = SubResource( 31 )
-
-[node name="MGBot2" parent="." instance=ExtResource( 9 )]
-position = Vector2( -265.595, 378.71 )

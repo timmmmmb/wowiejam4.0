@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scenes/entities/Entity.gd" type="Script" id=1]
 [ext_resource path="res://assets/EnemyPlaceholder.png" type="Texture" id=2]
+[ext_resource path="res://assets/Sounds/effects/playerfootstep.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/Sounds/effects/death.wav" type="AudioStream" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -40,3 +42,12 @@ animation = "moving"
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
 shape = SubResource( 4 )
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 3 )
+volume_db = -30.0
+max_distance = 1000.0
+attenuation = 4.0
+
+[node name="Death" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 4 )
