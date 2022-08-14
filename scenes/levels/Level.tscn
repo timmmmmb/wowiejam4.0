@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://scenes/entities/PistolBot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Lights/WhiteLight.tscn" type="PackedScene" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://assets/Walls.tres" type="TileSet" id=14]
 [ext_resource path="res://scenes/levels/GameOver.tscn" type="PackedScene" id=15]
 [ext_resource path="res://scenes/levels/Level.gd" type="Script" id=16]
+[ext_resource path="res://scenes/levels/Victory.tscn" type="PackedScene" id=17]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -235,6 +236,9 @@ position = Vector2( -1058.63, 223.991 )
 pause_mode = 2
 visible = false
 
+[node name="Victory" parent="Player" instance=ExtResource( 17 )]
+pause_mode = 2
+
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 current = true
 
@@ -252,6 +256,7 @@ scale = Vector2( 2, 2 )
 entity_path = NodePath("../../../Companion")
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="Player"]
+pause_mode = 2
 position = Vector2( 1058.63, -223.991 )
 stream = ExtResource( 3 )
 volume_db = -10.0
@@ -396,5 +401,7 @@ position = Vector2( 3069.79, 1762.88 )
 [node name="Door3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1536.66, 1497.81 )
 
+[connection signal="entered" from="Elevator3" to="." method="_on_Elevator_entered"]
+[connection signal="entered" from="Elevator4" to="." method="_on_Elevator_entered"]
 [connection signal="died" from="Player" to="." method="_on_Player_died"]
 [connection signal="died" from="Companion" to="." method="_on_Companion_died"]

@@ -5,9 +5,10 @@
 [ext_resource path="res://scenes/levels/GameOver.gd" type="Script" id=3]
 
 [node name="GameOver" type="Node2D"]
+z_index = 10
 script = ExtResource( 3 )
 
-[node name="Title" type="Label" parent="."]
+[node name="Label" type="Label" parent="."]
 margin_left = -144.0
 margin_top = -66.0
 margin_right = 145.0
@@ -15,7 +16,7 @@ margin_bottom = -8.0
 custom_fonts/font = ExtResource( 2 )
 text = "Game Over"
 
-[node name="Enter" type="Label" parent="."]
+[node name="Label2" type="Label" parent="."]
 margin_left = -120.0
 margin_top = 13.0
 margin_right = 123.0

@@ -1,5 +1,25 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
 
-[node name="Victory" type="Control"]
-anchor_right = 1.0
-anchor_bottom = 1.0
+[ext_resource path="res://assets/font/font22pt.tres" type="DynamicFont" id=1]
+[ext_resource path="res://assets/font/font48pt.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/levels/GameOver.gd" type="Script" id=3]
+
+[node name="Victory" type="Node2D"]
+z_index = 10
+script = ExtResource( 3 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -98.0
+margin_top = -66.0
+margin_right = 98.0
+margin_bottom = -8.0
+custom_fonts/font = ExtResource( 2 )
+text = "Victory!"
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -140.0
+margin_top = 13.0
+margin_right = 140.0
+margin_bottom = 40.0
+custom_fonts/font = ExtResource( 1 )
+text = "Press enter to play again"
