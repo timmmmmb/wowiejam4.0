@@ -7,20 +7,13 @@ export var max_health = 10.0
 var health: float
 export var max_shield = 0.0
 var shield: float
-var shield_timer: Timer
-export var shield_cooldown = 1.0
+onready var shield_timer = $ShieldTimer
 export var shield_regeneration = 20.0
 export var speed = 10
 var current_weapon
 var velocity : Vector2 = Vector2(0, 0)
 
-
 func _ready() -> void:
-	shield_timer = Timer.new()
-	shield_timer.one_shot = true
-	shield_timer.wait_time = shield_cooldown
-	get_tree().root.get_child(0).call_deferred("add_child", shield_timer)
-
 	health = max_health
 	shield = 0
 
