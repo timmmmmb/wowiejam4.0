@@ -384,9 +384,6 @@ autowrap = true
 [node name="WhiteLight10" parent="Tutorial/Label3" instance=ExtResource( 2 )]
 position = Vector2( 119.494, 27.4742 )
 
-[connection signal="died" from="Player" to="." method="_on_Player_died"]
-[connection signal="died" from="Companion" to="." method="_on_Companion_died"]
-
 [node name="Door5" parent="." instance=ExtResource( 7 )]
 position = Vector2( 3840.48, 416.842 )
 
@@ -398,3 +395,6 @@ position = Vector2( 3069.79, 1762.88 )
 
 [node name="Door3" parent="." instance=ExtResource( 7 )]
 position = Vector2( 1536.66, 1497.81 )
+
+[connection signal="died" from="Player" to="." method="_on_Player_died"]
+[connection signal="died" from="Companion" to="." method="_on_Companion_died"]

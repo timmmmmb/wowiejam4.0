@@ -55,6 +55,10 @@ run/main_scene="res://scenes/levels/Menu.tscn"
 boot_splash/image="res://assets/logo-gamejam2022.png"
 config/icon="res://assets/logo-gamejam2022.png"
 
+[display]
+
+window/size/resizable=false
+
 [gdnative]
 
 singletons=[  ]
