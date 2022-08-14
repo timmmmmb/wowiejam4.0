@@ -15,15 +15,24 @@ func move(_delta: float) -> void:
 	var direction = Vector2(0, 0)
 
 	if left:
+		$AnimatedSprite.animation = "left"
 		direction.x -= 1
 	if right:
+		$AnimatedSprite.animation = "right"
 		direction.x += 1
 	if up:
+		$AnimatedSprite.animation = "up"
 		direction.y -= 1
 	if down:
+		$AnimatedSprite.animation = "down"
 		direction.y += 1
 	
 	var velocity = direction.normalized() * speed
+	
+	if velocity.x == 0 && velocity.y == 0 :
+		$AnimatedSprite.animation = "default"
+	
+	
 	
 	move_and_collide(velocity * _delta)
 

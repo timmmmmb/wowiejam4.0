@@ -70,7 +70,6 @@ func behaviour():
 			patrol_index = wrapi(patrol_index + 1, 0, patrol_points.size())
 			target = patrol_points[patrol_index]
 		velocity = (target - position).normalized() * speed
-		look_at(target)
 		velocity = move_and_slide(velocity)
 	elif state == STATE.ATTACKING && $AttackDelay.is_stopped():
 		shoot()
@@ -78,7 +77,6 @@ func behaviour():
 	elif state == STATE.SEARCHING:
 		var target = get_nearest_enemy().position
 		velocity = (target - position).normalized() * speed
-		look_at(target)
 		velocity = move_and_slide(velocity)
 		
 
