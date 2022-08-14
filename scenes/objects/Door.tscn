@@ -1,0 +1,206 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://assets/metal-door-animated.png" type="Texture" id=1]
+[ext_resource path="res://scenes/Lights/RedLight.tscn" type="PackedScene" id=2]
+[ext_resource path="res://scenes/objects/Door.gd" type="Script" id=3]
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LeftCollisionShape:shape:extents")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 32, 25 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LeftCollisionShape:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( -32, 2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("LeftOccluder:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("RightOccluder:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 64, 0 ) ]
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "open"
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("LeftCollisionShape:shape:extents")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 32, 25 ), Vector2( 27, 25 ), Vector2( 22, 25 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("LeftCollisionShape:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( -32, 2 ), Vector2( -37, 2 ), Vector2( -42, 2 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("RightCollisionShape:shape:extents")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 32, 25 ), Vector2( 27, 25 ), Vector2( 22, 25 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("RightCollisionShape:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 32, 2 ), Vector2( 37, 2 ), Vector2( 42, 2 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("LeftOccluder:position")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 0, 0 ), Vector2( -10, 0 ), Vector2( -20, 0 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("RightOccluder:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ Vector2( 64, 0 ), Vector2( 74, 0 ), Vector2( 84, 0 ) ]
+}
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 32, 25 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 32, 25 )
+
+[sub_resource type="CircleShape2D" id=6]
+radius = 100.0
+
+[sub_resource type="OccluderPolygon2D" id=7]
+polygon = PoolVector2Array( -64, -23, 0, -23, 0, -17, -64, -17 )
+
+[sub_resource type="OccluderPolygon2D" id=8]
+polygon = PoolVector2Array( -64, -23, 0, -23, 0, -17, -64, -17 )
+
+[node name="Door" type="StaticBody2D"]
+script = ExtResource( 3 )
+
+[node name="Alarm" parent="." instance=ExtResource( 2 )]
+position = Vector2( 56, -8 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "RESET"
+reset_on_save = false
+anims/RESET = SubResource( 2 )
+anims/open = SubResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+vframes = 4
+
+[node name="LeftCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2( -32, 2 )
+shape = SubResource( 4 )
+
+[node name="RightCollisionShape" type="CollisionShape2D" parent="."]
+position = Vector2( 32, 2 )
+shape = SubResource( 5 )
+
+[node name="Sensor" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sensor"]
+shape = SubResource( 6 )
+
+[node name="LeftOccluder" type="LightOccluder2D" parent="."]
+occluder = SubResource( 7 )
+
+[node name="RightOccluder" type="LightOccluder2D" parent="."]
+position = Vector2( 64, 0 )
+occluder = SubResource( 8 )
