@@ -31,17 +31,27 @@ func get_nearest_enemy() -> Node2D:
 	
 	for enemy in enemies:
 		var distance = global_position.distance_squared_to(enemy.global_position)
-		if distance < nearest_distance:
+		if  distance < nearest_distance:
 			nearest_enemy = enemy
 			nearest_distance = distance
 	
 	return nearest_enemy
 
 
+func is_enemy_visible(enemy: Node2D) -> bool:
+	if global_position.distance_to(enemy.global_position) > vision_range:
+		return false
+	
+	var space_state = get_world_2d().direct_space_state
+	var result = space_state.intersect_ray(global_position, enemy.global_position)
+
+	return true if result else false
+
+
 func _on_Timer_timeout() -> void:
 	var nearest_enemy = get_nearest_enemy()
 	
-	if nearest_enemy:
+	if nearest_enemy and is_enemy_visible(nearest_enemy):
 		weapon.look_at(nearest_enemy.global_position)
 		weapon.rotate(PI / 2)
 		weapon.shoot()
