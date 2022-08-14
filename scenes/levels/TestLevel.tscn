@@ -434,7 +434,7 @@ __meta__ = {
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 61.9131, 380.167 )
-maxShield = 90
+max_shield = 90
 speed = 200
 
 [node name="Companion" parent="." instance=ExtResource( 3 )]

@@ -31,7 +31,7 @@ func get_nearest_enemy() -> Node2D:
 	
 	for enemy in enemies:
 		var distance = global_position.distance_squared_to(enemy.global_position)
-		if  distance < nearest_distance:
+		if distance < nearest_distance:
 			nearest_enemy = enemy
 			nearest_distance = distance
 	
