@@ -440,8 +440,6 @@ __meta__ = {
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 88, 380.167 )
-max_shield = 90
-speed = 200
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
 current = true

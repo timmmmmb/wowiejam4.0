@@ -110,22 +110,15 @@ max_distance_to_player = 100
 player_path = NodePath("")
 weapon_path = NodePath("StandardWeapon")
 
-[node name="Label" type="Label" parent="." index="0"]
-margin_left = -35.3494
-margin_top = -49.0791
-margin_right = 36.6506
-margin_bottom = -35.0791
-text = "Companion"
-
-[node name="AnimatedSprite" parent="." index="1"]
+[node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 1 )
 animation = "default"
 playing = true
 
-[node name="StandardWeapon" parent="." index="3" instance=ExtResource( 4 )]
+[node name="StandardWeapon" parent="." index="2" instance=ExtResource( 4 )]
 Projectile = ExtResource( 3 )
 
-[node name="Timer" type="Timer" parent="." index="4"]
+[node name="Timer" type="Timer" parent="." index="3"]
 autostart = true
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
