@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://scenes/entities/PistolBot.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/Lights/WhiteLight.tscn" type="PackedScene" id=2]
@@ -85,6 +85,11 @@ _data = {
 [sub_resource type="Curve2D" id=30]
 _data = {
 "points": PoolVector2Array( 0, 0, 0, 0, 2174.87, 1086.07, 0, 0, 0, 0, 3584.27, 1085.18 )
+}
+
+[sub_resource type="Curve2D" id=34]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 638.797, 1087.14, 0, 0, 0, 0, 1534.78, 1087.14 )
 }
 
 [sub_resource type="Curve2D" id=31]
@@ -297,6 +302,7 @@ position = Vector2( 576, 640 )
 curve = SubResource( 30 )
 
 [node name="Path2D2" type="Path2D" parent="Paths"]
+curve = SubResource( 34 )
 
 [node name="Path2D3" type="Path2D" parent="Paths"]
 curve = SubResource( 31 )
