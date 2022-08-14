@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=25 format=2]
 
 [ext_resource path="res://scenes/entities/Entity.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/entities/Companion.gd" type="Script" id=2]
@@ -102,6 +102,10 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=19]
+radius = 14.155
+height = 17.7002
+
 [node name="Companion" groups=["Player"] instance=ExtResource( 1 )]
 script = ExtResource( 2 )
 speed = 100
@@ -115,8 +119,13 @@ frames = SubResource( 1 )
 animation = "default"
 playing = true
 
+[node name="HitBox" parent="." index="1"]
+position = Vector2( 0, 3 )
+shape = SubResource( 19 )
+
 [node name="StandardWeapon" parent="." index="2" instance=ExtResource( 4 )]
 Projectile = ExtResource( 3 )
+damage = 3
 
 [node name="Timer" type="Timer" parent="." index="3"]
 autostart = true

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scenes/entities/PistolBot.gd" type="Script" id=1]
 [ext_resource path="res://scenes/entities/Entity.tscn" type="PackedScene" id=2]
@@ -101,9 +101,13 @@ animations = [ {
 "speed": 5.0
 } ]
 
+[sub_resource type="CapsuleShape2D" id=19]
+radius = 12.9059
+height = 20.7509
+
 [node name="PistolBot" groups=["Enemies"] instance=ExtResource( 2 )]
 script = ExtResource( 1 )
-speed = 30
+speed = 50
 weapon = NodePath("StandardWeapon")
 patrol_path = NodePath("")
 attack_delay = 1.0
@@ -113,8 +117,13 @@ vision_range = 300
 frames = SubResource( 1 )
 animation = "default"
 
+[node name="HitBox" parent="." index="1"]
+position = Vector2( 0, 2 )
+shape = SubResource( 19 )
+
 [node name="StandardWeapon" parent="." index="2" instance=ExtResource( 4 )]
 delay = 3.0
+damage = 3
 
 [node name="AttackDelay" type="Timer" parent="." index="3"]
 one_shot = true
