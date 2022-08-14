@@ -17,6 +17,7 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:	
+	enemies = get_tree().get_nodes_in_group("Enemies")
 	var companion_to_player = player.position - position
 	var distance_to_player = companion_to_player.abs().length()
 	

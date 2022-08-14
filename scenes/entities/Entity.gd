@@ -19,6 +19,7 @@ func _ready() -> void:
 	shield_timer = Timer.new()
 	shield_timer.one_shot = true
 	shield_timer.wait_time = shield_cooldown
+	get_tree().root.get_child(0).call_deferred("add_child", shield_timer)
 
 	health = max_health
 	shield = 0

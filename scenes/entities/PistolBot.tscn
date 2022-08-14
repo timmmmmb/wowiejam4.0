@@ -10,7 +10,21 @@ speed = 30
 weapon = NodePath("StandardWeapon")
 patrol_path = NodePath("")
 attack_delay = 1.0
+vision_range = 300
+
+[node name="AnimatedSprite" parent="." index="0"]
+animation = "hit"
 
 [node name="StandardWeapon" parent="." index="2" instance=ExtResource( 4 )]
+delay = 3.0
 
 [node name="AttackDelay" type="Timer" parent="." index="3"]
+one_shot = true
+autostart = true
+
+[node name="SearchTimer" type="Timer" parent="." index="4"]
+wait_time = 5.0
+one_shot = true
+
+[connection signal="died" from="." to="." method="_on_PistolBot_died"]
+[connection signal="timeout" from="SearchTimer" to="." method="_on_SearchTimer_timeout"]

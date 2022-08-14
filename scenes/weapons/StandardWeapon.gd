@@ -23,4 +23,5 @@ func spawn_bullet() -> void:
 	
 	projectile.global_position = global_position
 	projectile.rotation = global_rotation
+	projectile.damage = damage
 	get_tree().root.get_child(0).call_deferred("add_child", projectile)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/projectiles/Bullet.gd" type="Script" id=1]
 [ext_resource path="res://assets/EnemyPlaceholder.png" type="Texture" id=2]
@@ -10,15 +10,25 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 64, 64 )
 
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 0, 0, 64, 64 )
+
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
 "frames": [ SubResource( 2 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
+}, {
+"frames": [ SubResource( 4 ) ],
+"loop": true,
+"name": "hit",
+"speed": 5.0
 } ]
 
-[node name="Node2D" type="Area2D"]
+[node name="Bullet" type="Area2D"]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -29,3 +39,4 @@ shape = SubResource( 1 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
+[connection signal="body_entered" from="." to="." method="_on_Bullet_body_entered"]
