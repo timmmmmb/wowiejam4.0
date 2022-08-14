@@ -1,7 +1,12 @@
 extends Entity
 class_name Player
 
+
 func _physics_process(_delta: float) -> void:
+	move(_delta)
+
+
+func move(_delta: float) -> void:
 	var left = Input.is_action_pressed("left")
 	var right = Input.is_action_pressed("right")
 	var up = Input.is_action_pressed("up")
@@ -20,4 +25,5 @@ func _physics_process(_delta: float) -> void:
 	
 	var velocity = direction.normalized() * speed
 	
-	.move_and_collide(velocity * _delta)
+	move_and_collide(velocity * _delta)
+
