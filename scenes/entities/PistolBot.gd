@@ -13,7 +13,7 @@ var enemies: Array
 func _ready() -> void:
 	$AttackDelay.wait_time = attack_delay
 	current_weapon = get_node(weapon)
-	enemies = get_tree().get_nodes_in_group("Player")
+	enemies = get_tree().get_nodes_in_group("Companion")
 	wake_up()
 
 func wake_up():
