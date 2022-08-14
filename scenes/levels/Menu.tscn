@@ -4,7 +4,7 @@
 [ext_resource path="res://assets/Tileset.tres" type="TileSet" id=2]
 [ext_resource path="res://scenes/Lights/WhiteLight.tscn" type="PackedScene" id=3]
 [ext_resource path="res://assets/font/font22pt.tres" type="DynamicFont" id=4]
-[ext_resource path="res://assets/font/font48pt.tres" type="DynamicFont" id=5]
+[ext_resource path="res://assets/logo-gamejam2022.png" type="Texture" id=5]
 [ext_resource path="res://assets/robot-sprite.png" type="Texture" id=6]
 [ext_resource path="res://assets/robot-companion-sprite.png" type="Texture" id=7]
 [ext_resource path="res://scenes/objects/Elevator.tscn" type="PackedScene" id=8]
@@ -75,7 +75,7 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id=1]
 resource_name = "Start"
-length = 4.0
+length = 3.5
 tracks/0/type = "value"
 tracks/0/path = NodePath("UI:visible")
 tracks/0/interp = 1
@@ -204,14 +204,9 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Icon" type="Sprite" parent="UI"]
-
-[node name="Title" type="Label" parent="UI"]
-margin_left = -157.751
-margin_top = -178.413
-margin_right = 148.249
-margin_bottom = -120.413
-custom_fonts/font = ExtResource( 5 )
-text = "Companions"
+position = Vector2( 0, -194 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 5 )
 
 [node name="Enter" type="Label" parent="UI"]
 margin_left = -109.01

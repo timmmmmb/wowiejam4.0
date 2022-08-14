@@ -50,9 +50,10 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Wowiejam 4 . 0"
+config/name="Escape from AI Facility"
 run/main_scene="res://scenes/levels/Menu.tscn"
-config/icon="res://icon.png"
+boot_splash/image="res://assets/logo-gamejam2022.png"
+config/icon="res://assets/logo-gamejam2022.png"
 
 [gdnative]
 

@@ -16,7 +16,6 @@ func _ready() -> void:
 
 
 func _physics_process(_delta: float) -> void:	
-	enemies = get_tree().get_nodes_in_group("Enemies")
 	var companion_to_player = player.position - position
 	var distance_to_player = companion_to_player.abs().length()
 	
@@ -43,6 +42,7 @@ func get_nearest_enemy() -> Node2D:
 	var nearest_distance = INF
 	var nearest_enemy = null
 	
+	enemies = get_tree().get_nodes_in_group("Enemies")
 	for enemy in enemies:
 		var distance = global_position.distance_squared_to(enemy.global_position)
 		if distance < nearest_distance:

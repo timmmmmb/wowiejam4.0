@@ -116,7 +116,6 @@ weapon_path = NodePath("StandardWeapon")
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 18 )
-animation = "default"
 playing = true
 
 [node name="HitBox" parent="." index="1"]
@@ -125,7 +124,8 @@ shape = SubResource( 19 )
 
 [node name="StandardWeapon" parent="." index="2" instance=ExtResource( 4 )]
 Projectile = ExtResource( 3 )
-damage = 3
+delay = 0.5
+damage = 5
 
 [node name="Timer" type="Timer" parent="." index="3"]
 autostart = true

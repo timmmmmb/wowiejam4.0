@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/HealthBar.gd" type="Script" id=1]
+[ext_resource path="res://assets/hpbar-overlay.png" type="Texture" id=2]
 
 [node name="HealthBar" type="Node2D"]
 script = ExtResource( 1 )
@@ -20,3 +21,19 @@ margin_left = 40.0
 margin_right = 80.0
 margin_bottom = 10.0
 color = Color( 0.0392157, 0.654902, 0.921569, 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 5.0
+margin_bottom = 10.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="ColorRect2" type="ColorRect" parent="."]
+margin_right = 7.0
+margin_bottom = 7.0
+rect_rotation = 45.0
+color = Color( 1, 0, 0, 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 47.8136, 5.46133 )
+scale = Vector2( 0.0564796, 0.0456232 )
+texture = ExtResource( 2 )

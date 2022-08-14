@@ -25,9 +25,15 @@ shape = SubResource( 2 )
 [node name="GreenElevatorLight" parent="." instance=ExtResource( 3 )]
 position = Vector2( -18, -8 )
 enabled = false
+shadow_gradient_length = 5.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
 
 [node name="RedElevatorLight" parent="." instance=ExtResource( 4 )]
 position = Vector2( -12.0407, -7.8785 )
+shadow_gradient_length = 5.0
+shadow_filter = 0
+shadow_filter_smooth = 0.0
 
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

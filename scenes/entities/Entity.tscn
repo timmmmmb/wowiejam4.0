@@ -1,14 +1,14 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://scenes/entities/Entity.gd" type="Script" id=1]
 [ext_resource path="res://assets/EnemyPlaceholder.png" type="Texture" id=2]
 [ext_resource path="res://assets/Sounds/effects/playerfootstep.wav" type="AudioStream" id=3]
 [ext_resource path="res://assets/Sounds/effects/death.wav" type="AudioStream" id=4]
+[ext_resource path="res://assets/robot-companion-sprite.png" type="Texture" id=5]
 
-[sub_resource type="AtlasTexture" id=1]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 0, 64, 64 )
+[sub_resource type="AtlasTexture" id=6]
+atlas = ExtResource( 5 )
+region = Rect2( 48, 0, 48, 48 )
 
 [sub_resource type="AtlasTexture" id=2]
 flags = 4
@@ -17,7 +17,7 @@ region = Rect2( 0, 0, 64, 64 )
 
 [sub_resource type="SpriteFrames" id=3]
 animations = [ {
-"frames": [ SubResource( 1 ) ],
+"frames": [ SubResource( 6 ) ],
 "loop": true,
 "name": "default",
 "speed": 5.0
@@ -30,6 +30,10 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=4]
 
+[sub_resource type="OccluderPolygon2D" id=5]
+cull_mode = 1
+polygon = PoolVector2Array( -0.26342, -18.8517, 4.92934, -18.8871, 9.39391, -13.9265, 10.4852, 0.657761, 10.1876, 14.7459, -0.0406952, 20.0137, -11.5399, 15.1428, -12.2344, 0.657761, -11.9368, -12.0415, -6.08326, -19.0855 )
+
 [node name="Entity" type="KinematicBody2D" groups=["Entity"]]
 script = ExtResource( 1 )
 __meta__ = {
@@ -38,9 +42,9 @@ __meta__ = {
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 3 )
-animation = "moving"
 
 [node name="HitBox" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource( 4 )
 
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
@@ -54,3 +58,7 @@ stream = ExtResource( 4 )
 
 [node name="ShieldTimer" type="Timer" parent="."]
 one_shot = true
+
+[node name="LightOccluder2D" type="LightOccluder2D" parent="."]
+show_behind_parent = true
+occluder = SubResource( 5 )
