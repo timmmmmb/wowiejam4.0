@@ -54,6 +54,21 @@ func shoot() -> void:
 	current_weapon.look_at(target)
 	current_weapon.rotate(PI / 2)
 	current_weapon.shoot()
+	
+func move(target) -> void:
+	velocity = (target - position).normalized() * speed
+	velocity = move_and_slide(velocity)
+	if abs(velocity.x) > abs(velocity.y):
+		if velocity.x > 0:
+			$AnimatedSprite.animation = "right"
+		else:
+			$AnimatedSprite.animation = "left"
+	else:
+		if velocity.y > 0:
+			$AnimatedSprite.animation = "down"
+		else:
+			$AnimatedSprite.animation = "up"
+
 
 func behaviour():
 	if state == STATE.DEAD:
@@ -61,6 +76,7 @@ func behaviour():
 	var seesEnemy = is_enemy_visible(get_nearest_enemy())
 	if seesEnemy:
 		state = STATE.ATTACKING
+		$AnimatedSprite.animation = "default"
 	elif !seesEnemy && state == STATE.ATTACKING:
 		state = STATE.SEARCHING
 		$SearchTimer.start()
@@ -69,15 +85,12 @@ func behaviour():
 		if position.distance_to(target) < 1:
 			patrol_index = wrapi(patrol_index + 1, 0, patrol_points.size())
 			target = patrol_points[patrol_index]
-		velocity = (target - position).normalized() * speed
-		velocity = move_and_slide(velocity)
+		move(target)
 	elif state == STATE.ATTACKING && $AttackDelay.is_stopped():
 		shoot()
 		$AttackDelay.start(attack_delay)
 	elif state == STATE.SEARCHING:
-		var target = get_nearest_enemy().position
-		velocity = (target - position).normalized() * speed
-		velocity = move_and_slide(velocity)
+		move(get_nearest_enemy().position)
 		
 
 

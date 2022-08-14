@@ -120,6 +120,7 @@ text = "Companion"
 [node name="AnimatedSprite" parent="." index="1"]
 frames = SubResource( 1 )
 animation = "default"
+playing = true
 
 [node name="StandardWeapon" parent="." index="3" instance=ExtResource( 4 )]
 Projectile = ExtResource( 3 )

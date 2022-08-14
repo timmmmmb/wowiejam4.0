@@ -24,7 +24,18 @@ func _physics_process(_delta: float) -> void:
 	if distance_to_player <= vision_range and distance_to_player > max_distance_to_player:
 		velocity = companion_to_player.normalized() * speed
 		velocity = move_and_slide(velocity)
-
+		if abs(velocity.x) > abs(velocity.y):
+			if velocity.x > 0:
+				$AnimatedSprite.animation = "right"
+			else:
+				$AnimatedSprite.animation = "left"
+		else:
+			if velocity.y > 0:
+				$AnimatedSprite.animation = "down"
+			else:
+				$AnimatedSprite.animation = "up"
+	else:
+		$AnimatedSprite.animation = "default"
 
 func get_nearest_enemy() -> Node2D:
 	var nearest_distance = INF
