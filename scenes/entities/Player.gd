@@ -34,5 +34,5 @@ func move(_delta: float) -> void:
 	elif !$Footsteps.playing:
 		$Footsteps.play()
 	
-	velocity = move_and_collide(velocity * _delta)
+	velocity = move_and_slide(velocity)
 

@@ -41,7 +41,10 @@ func takeDamage(damage) -> void:
 		destroy()
 
 
-func destroy():
+func destroy() -> void:
+	health = 0
+	shield = 0
+	
 	if current_weapon != null:
 		current_weapon.disable_shooting = true
 	$Death.play()
