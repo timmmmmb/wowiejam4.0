@@ -1,0 +1,26 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://scenes/objects/Elevator.gd" type="Script" id=1]
+[ext_resource path="res://assets/tileset-scifi.png" type="Texture" id=2]
+[ext_resource path="res://scenes/Lights/GreenElevatorLight.tscn" type="PackedScene" id=3]
+
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 256, 192, 64, 64 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 30, 15 )
+
+[node name="Elevator" type="Sprite"]
+texture = SubResource( 1 )
+script = ExtResource( 1 )
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 0, 12.5619 )
+shape = SubResource( 2 )
+
+[node name="GreenElevatorLight" parent="." instance=ExtResource( 3 )]
+position = Vector2( -18, -8 )
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]

@@ -13,6 +13,7 @@ export var speed = 10
 var current_weapon
 var velocity : Vector2 = Vector2(0, 0)
 
+
 func _ready() -> void:
 	health = max_health
 	shield = 0
@@ -21,6 +22,7 @@ func _ready() -> void:
 func _physics_process(delta: float) -> void:
 	if shield_timer.is_stopped():
 		shield = min(max_shield, shield + shield_regeneration * delta)
+
 
 func shoot():
 	if current_weapon:
