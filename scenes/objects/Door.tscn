@@ -169,7 +169,7 @@ polygon = PoolVector2Array( -64, -23, 0, -23, 0, -17, -64, -17 )
 [sub_resource type="OccluderPolygon2D" id=8]
 polygon = PoolVector2Array( -64, -23, 0, -23, 0, -17, -64, -17 )
 
-[node name="Door" type="StaticBody2D"]
+[node name="Door" type="StaticBody2D" groups=["Object"]]
 script = ExtResource( 3 )
 
 [node name="Alarm" parent="." instance=ExtResource( 2 )]

@@ -30,9 +30,7 @@ animations = [ {
 
 [sub_resource type="CapsuleShape2D" id=4]
 
-[node name="Entity" type="KinematicBody2D" groups=[
-"Entity",
-]]
+[node name="Entity" type="KinematicBody2D" groups=["Entity"]]
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true

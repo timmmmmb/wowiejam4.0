@@ -7,8 +7,8 @@ onready var sensor = $Sensor
 var open = false
 
 
-func _physics_process(delta: float) -> void:
-	if is_player_in_sensor():
+func _physics_process(_delta: float) -> void:
+	if is_character_in_sensor():
 		if not open:
 			print("open")
 			animation_player.play("open")
@@ -20,8 +20,8 @@ func _physics_process(delta: float) -> void:
 			open = false
 
 
-func is_player_in_sensor() -> bool:
+func is_character_in_sensor() -> bool:
 	for body in sensor.get_overlapping_bodies():
-		if body.is_in_group("Player"):
+		if body.is_in_group("Entity"):
 			return true
 	return false

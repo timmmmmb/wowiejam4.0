@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scenes/objects/Elevator.gd" type="Script" id=1]
 [ext_resource path="res://assets/tileset-scifi.png" type="Texture" id=2]
 [ext_resource path="res://scenes/Lights/GreenElevatorLight.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Lights/RedElevatorLight.tscn" type="PackedScene" id=4]
 
 [sub_resource type="AtlasTexture" id=1]
 atlas = ExtResource( 2 )
@@ -23,4 +24,9 @@ shape = SubResource( 2 )
 
 [node name="GreenElevatorLight" parent="." instance=ExtResource( 3 )]
 position = Vector2( -18, -8 )
+enabled = false
+
+[node name="RedElevatorLight" parent="." instance=ExtResource( 4 )]
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

@@ -3,5 +3,5 @@
 [ext_resource path="res://scenes/Lights/WitheLight.tscn" type="PackedScene" id=1]
 
 [node name="RedElevatorLight" instance=ExtResource( 1 )]
-texture_scale = 0.25
+texture_scale = 0.1
 color = Color( 1, 0, 0, 1 )
