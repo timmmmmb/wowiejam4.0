@@ -1,16 +1,17 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=41 format=2]
 
 [ext_resource path="res://scenes/entities/PistolBot.tscn" type="PackedScene" id=1]
-[ext_resource path="res://scenes/entities/Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/entities/Companion.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/Lights/WitheLight.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/entities/ShotgunBot.tscn" type="PackedScene" id=5]
-[ext_resource path="res://assets/tileset-scifi.png" type="Texture" id=6]
-[ext_resource path="res://scenes/HealthBar.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/entities/MGBot.tscn" type="PackedScene" id=9]
-[ext_resource path="res://assets/Sounds/bgm/bouncing_helper.wav" type="AudioStream" id=10]
-[ext_resource path="res://scenes/objects/Door.tscn" type="PackedScene" id=11]
-[ext_resource path="res://scenes/objects/Elevator.tscn" type="PackedScene" id=12]
+[ext_resource path="res://scenes/Lights/WhiteLight.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Sounds/bgm/bouncing_helper.wav" type="AudioStream" id=3]
+[ext_resource path="res://assets/tileset-scifi.png" type="Texture" id=4]
+[ext_resource path="res://scenes/objects/Elevator.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/entities/Player.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/objects/Door.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/HealthBar.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/entities/Companion.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/entities/ShotgunBot.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/entities/MGBot.tscn" type="PackedScene" id=11]
+[ext_resource path="res://assets/font/font22pt.tres" type="DynamicFont" id=12]
 
 [sub_resource type="NavigationPolygon" id=1]
 vertices = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -91,7 +92,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 
 [sub_resource type="TileSet" id=26]
 0/name = "tileset-scifi.png 0"
-0/texture = ExtResource( 6 )
+0/texture = ExtResource( 4 )
 0/tex_offset = Vector2( 0, 0 )
 0/modulate = Color( 1, 1, 1, 1 )
 0/region = Rect2( 0, 0, 64, 64 )
@@ -106,7 +107,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 0/shapes = [  ]
 0/z_index = 0
 1/name = "tileset-scifi.png 1"
-1/texture = ExtResource( 6 )
+1/texture = ExtResource( 4 )
 1/tex_offset = Vector2( 0, 0 )
 1/modulate = Color( 1, 1, 1, 1 )
 1/region = Rect2( 192, 0, 64, 64 )
@@ -121,7 +122,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 1/shapes = [  ]
 1/z_index = 0
 2/name = "tileset-scifi.png 2"
-2/texture = ExtResource( 6 )
+2/texture = ExtResource( 4 )
 2/tex_offset = Vector2( 0, 0 )
 2/modulate = Color( 1, 1, 1, 1 )
 2/region = Rect2( 64, 64, 64, 64 )
@@ -135,7 +136,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 2/shapes = [  ]
 2/z_index = 0
 4/name = "tileset-scifi.png 4"
-4/texture = ExtResource( 6 )
+4/texture = ExtResource( 4 )
 4/tex_offset = Vector2( 0, 0 )
 4/modulate = Color( 1, 1, 1, 1 )
 4/region = Rect2( 64, 0, 64, 64 )
@@ -157,7 +158,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 } ]
 4/z_index = 0
 5/name = "tileset-scifi.png 5"
-5/texture = ExtResource( 6 )
+5/texture = ExtResource( 4 )
 5/tex_offset = Vector2( 0, 0 )
 5/modulate = Color( 1, 1, 1, 1 )
 5/region = Rect2( 128, 64, 64, 64 )
@@ -179,7 +180,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 } ]
 5/z_index = 0
 6/name = "tileset-scifi.png 6"
-6/texture = ExtResource( 6 )
+6/texture = ExtResource( 4 )
 6/tex_offset = Vector2( 0, 0 )
 6/modulate = Color( 1, 1, 1, 1 )
 6/region = Rect2( 64, 128, 64, 64 )
@@ -201,7 +202,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 } ]
 6/z_index = 0
 7/name = "tileset-scifi.png 7"
-7/texture = ExtResource( 6 )
+7/texture = ExtResource( 4 )
 7/tex_offset = Vector2( 0, 0 )
 7/modulate = Color( 1, 1, 1, 1 )
 7/region = Rect2( 0, 192, 64, 64 )
@@ -223,7 +224,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 } ]
 7/z_index = 0
 8/name = "tileset-scifi.png 8"
-8/texture = ExtResource( 6 )
+8/texture = ExtResource( 4 )
 8/tex_offset = Vector2( 0, 0 )
 8/modulate = Color( 1, 1, 1, 1 )
 8/region = Rect2( 0, 64, 64, 64 )
@@ -245,7 +246,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 } ]
 8/z_index = 0
 9/name = "tileset-scifi.png 9"
-9/texture = ExtResource( 6 )
+9/texture = ExtResource( 4 )
 9/tex_offset = Vector2( 0, 0 )
 9/modulate = Color( 1, 1, 1, 1 )
 9/region = Rect2( 0, 128, 64, 64 )
@@ -259,7 +260,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 9/shapes = [  ]
 9/z_index = 0
 10/name = "tileset-scifi.png 10"
-10/texture = ExtResource( 6 )
+10/texture = ExtResource( 4 )
 10/tex_offset = Vector2( 0, 0 )
 10/modulate = Color( 1, 1, 1, 1 )
 10/region = Rect2( 192, 64, 64, 64 )
@@ -281,7 +282,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 } ]
 10/z_index = 0
 11/name = "tileset-scifi.png 11"
-11/texture = ExtResource( 6 )
+11/texture = ExtResource( 4 )
 11/tex_offset = Vector2( 0, 0 )
 11/modulate = Color( 1, 1, 1, 1 )
 11/region = Rect2( 128, 0, 64, 64 )
@@ -296,7 +297,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 11/shapes = [  ]
 11/z_index = 0
 12/name = "tileset-scifi.png 12"
-12/texture = ExtResource( 6 )
+12/texture = ExtResource( 4 )
 12/tex_offset = Vector2( 0, 0 )
 12/modulate = Color( 1, 1, 1, 1 )
 12/region = Rect2( 192, 128, 64, 64 )
@@ -310,7 +311,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 12/shapes = [  ]
 12/z_index = 0
 13/name = "tileset-scifi.png 13"
-13/texture = ExtResource( 6 )
+13/texture = ExtResource( 4 )
 13/tex_offset = Vector2( 0, 0 )
 13/modulate = Color( 1, 1, 1, 1 )
 13/region = Rect2( 128, 128, 64, 64 )
@@ -325,7 +326,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 13/shapes = [  ]
 13/z_index = 0
 14/name = "tileset-scifi.png 14"
-14/texture = ExtResource( 6 )
+14/texture = ExtResource( 4 )
 14/tex_offset = Vector2( 0, 0 )
 14/modulate = Color( 1, 1, 1, 1 )
 14/region = Rect2( 128, 192, 64, 64 )
@@ -340,7 +341,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 14/shapes = [  ]
 14/z_index = 0
 15/name = "tileset-scifi.png 15"
-15/texture = ExtResource( 6 )
+15/texture = ExtResource( 4 )
 15/tex_offset = Vector2( 0, 0 )
 15/modulate = Color( 1, 1, 1, 1 )
 15/region = Rect2( 64, 192, 64, 64 )
@@ -354,7 +355,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 15/shapes = [  ]
 15/z_index = 0
 16/name = "tileset-scifi.png 16"
-16/texture = ExtResource( 6 )
+16/texture = ExtResource( 4 )
 16/tex_offset = Vector2( 0, 0 )
 16/modulate = Color( 1, 1, 1, 1 )
 16/region = Rect2( 192, 192, 64, 64 )
@@ -368,7 +369,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 16/shapes = [  ]
 16/z_index = 0
 17/name = "tileset-scifi.png 17"
-17/texture = ExtResource( 6 )
+17/texture = ExtResource( 4 )
 17/tex_offset = Vector2( 0, 0 )
 17/modulate = Color( 1, 1, 1, 1 )
 17/region = Rect2( 256, 0, 64, 64 )
@@ -390,7 +391,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 } ]
 17/z_index = 0
 18/name = "tileset-scifi.png 18"
-18/texture = ExtResource( 6 )
+18/texture = ExtResource( 4 )
 18/tex_offset = Vector2( 0, 0 )
 18/modulate = Color( 1, 1, 1, 1 )
 18/region = Rect2( 256, 192, 64, 64 )
@@ -404,7 +405,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 18/shapes = [  ]
 18/z_index = 0
 19/name = "tileset-scifi.png 19"
-19/texture = ExtResource( 6 )
+19/texture = ExtResource( 4 )
 19/tex_offset = Vector2( 0, 0 )
 19/modulate = Color( 1, 1, 1, 1 )
 19/region = Rect2( 256, 64, 64, 64 )
@@ -426,7 +427,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 } ]
 19/z_index = 0
 20/name = "tileset-scifi.png 20"
-20/texture = ExtResource( 6 )
+20/texture = ExtResource( 4 )
 20/tex_offset = Vector2( 0, 0 )
 20/modulate = Color( 1, 1, 1, 1 )
 20/region = Rect2( 256, 128, 64, 64 )
@@ -448,7 +449,7 @@ points = PoolVector2Array( 48, 64, 16, 64, 16, 0, 48, 0 )
 } ]
 20/z_index = 0
 21/name = "tileset-scifi.png 21"
-21/texture = ExtResource( 6 )
+21/texture = ExtResource( 4 )
 21/tex_offset = Vector2( 0, 0 )
 21/modulate = Color( 1, 1, 1, 1 )
 21/region = Rect2( 320, 128, 64, 64 )
@@ -505,43 +506,43 @@ cell_tile_origin = 2
 format = 1
 tile_data = PoolIntArray( 131051, 19, 0, 131052, 4, 0, 131053, 4, 0, 131054, 4, 0, 131055, 4, 0, 131056, 4, 0, 131057, 4, 0, 65539, 4, 0, 65540, 4, 0, 65541, 4, 0, 65542, 4, 0, 65543, 4, 0, 65544, 4, 0, 65545, 4, 0, 65546, 4, 0, 65547, 4, 0, 65548, 4, 0, 65549, 4, 0, 196587, 8, 0, 196593, 8, 0, 131075, 1610612744, 0, 131085, 8, 0, 262123, 8, 0, 262129, 8, 0, 262130, 4, 0, 262131, 4, 0, 262132, 4, 0, 262133, 4, 0, 262134, 4, 0, 262135, 4, 0, 262136, 4, 0, 262137, 4, 0, 262138, 4, 0, 262139, 4, 0, 262140, 4, 0, 262141, 4, 0, 262142, 4, 0, 262143, 4, 0, 196608, 4, 0, 196609, 4, 0, 196610, 4, 0, 196611, 1610612744, 0, 196621, 8, 0, 327659, 8, 0, 327666, 2, 0, 327667, 2, 0, 327668, 2, 0, 327669, 2, 0, 327670, 16, 0, 327671, 2, 0, 327672, 2, 0, 327673, 2, 0, 327674, 2, 0, 327675, 2, 0, 327676, 2, 0, 327677, 2, 0, 262157, 8, 0, 393195, 8, 0, 327693, 8, 0, 458731, 8, 0, 393229, 8, 0, 524267, 8, 0, 524273, 19, 0, 524274, 4, 0, 524275, 4, 0, 524276, 4, 0, 524277, 4, 0, 524278, 4, 0, 524279, 4, 0, 524280, 4, 0, 524281, 4, 0, 524282, 4, 0, 524283, 4, 0, 524284, 4, 0, 524285, 4, 0, 524286, 4, 0, 524287, 4, 0, 458752, 4, 0, 458753, 4, 0, 458754, 4, 0, 458755, 20, 0, 458765, 8, 0, 589803, 8, 0, 589804, 4, 0, 589805, 4, 0, 589806, 4, 0, 589807, 4, 0, 589808, 4, 0, 589809, 11, 0, 524291, 1610612744, 0, 524301, 8, 0, 589827, -1610612725, 0, 589828, 4, 0, 589829, 4, 0, 589830, 4, 0, 589831, 4, 0, 589834, 4, 0, 589835, 4, 0, 589836, 4, 0, 589837, 11, 0, 655367, 1073741832, 0, 655370, 536870920, 0, 720903, 1073741832, 0, 720906, 1610612744, 0, 786439, 1073741832, 0, 786442, 1610612744, 0, 851975, 1073741832, 0, 851978, 1610612744, 0, 917511, 1073741832, 0, 917514, 1610612744, 0, 983047, 1073741832, 0, 983050, 1610612744, 0, 1048583, -1073741820, 0, 1048586, -1610612732, 0, 1114119, -1073741820, 0, 1114122, -1610612732, 0, 1179655, -1073741820, 0, 1179658, -1610612732, 0, 1245191, -1073741820, 0, 1245194, -1610612732, 0, 1310727, -1073741820, 0, 1310730, -1610612732, 0, 1376263, -1073741820, 0, 1376266, -1610612732, 0, 1507309, 19, 0, 1507310, 4, 0, 1507311, 4, 0, 1507312, 4, 0, 1507313, 4, 0, 1507314, 4, 0, 1507315, 4, 0, 1507316, 4, 0, 1507317, 4, 0, 1507318, 536870931, 0, 1441799, -1073741820, 0, 1441802, -1610612732, 0, 1572845, 8, 0, 1572854, 536870923, 0, 1572855, 4, 0, 1572856, 4, 0, 1572857, 4, 0, 1572858, 4, 0, 1572859, 4, 0, 1572860, 4, 0, 1572861, 4, 0, 1572862, 4, 0, 1572863, 4, 0, 1507328, 4, 0, 1507329, 4, 0, 1507330, 4, 0, 1507331, 4, 0, 1507332, 4, 0, 1507333, 4, 0, 1507334, 4, 0, 1507335, -2147483637, 0, 1507338, 536870923, 0, 1507339, 536870931, 0, 1638381, 8, 0, 1572875, 536870920, 0, 1703917, 8, 0, 1638411, 536870920, 0, 1769453, 8, 0, 1703947, 536870920, 0, 1834989, 8, 0, 1834998, 4, 0, 1834999, 4, 0, 1835000, 4, 0, 1835001, 4, 0, 1835002, 4, 0, 1835003, 4, 0, 1835004, 4, 0, 1835005, 4, 0, 1835006, 4, 0, 1835007, 4, 0, 1769472, 4, 0, 1769473, 4, 0, 1769474, 4, 0, 1769475, 4, 0, 1769476, 4, 0, 1769477, 4, 0, 1769478, 4, 0, 1769483, 536870920, 0, 1900525, 8, 0, 1900534, 536870920, 0, 1835014, 8, 0, 1835015, 4, 0, 1835016, 4, 0, 1835017, 4, 0, 1835018, 4, 0, 1835019, 536870920, 0, 1966061, 8, 0, 1966062, 4, 0, 1966063, 4, 0, 1966067, 4, 0, 1966068, 4, 0, 1966069, 4, 0, 1966070, 536870920, 0, 2031599, 8, 0, 2031603, 536870920, 0, 2097135, 8, 0, 2097139, 536870920, 0, 2162671, 8, 0, 2162675, 536870920, 0, 2228207, 8, 0, 2228211, 536870920, 0, 2293743, 8, 0, 2293747, 536870920, 0, 2359279, 8, 0, 2359283, 536870920, 0, 2424815, 8, 0, 2424819, 536870920, 0, 2490350, 19, 0, 2490351, 11, 0, 2490355, 536870923, 0, 2490356, 536870931, 0, 2555886, 8, 0, 2555892, 536870920, 0, 2621422, 8, 0, 2621428, 536870920, 0, 2686958, 8, 0, 2686964, 536870920, 0, 2752494, 8, 0, 2752500, 536870920, 0, 2818030, 8, 0, 2818031, 4, 0, 2818032, 4, 0, 2818033, 4, 0, 2818034, 4, 0, 2818035, 4, 0, 2818036, 536870920, 0 )
 
-[node name="Elevator" parent="." instance=ExtResource( 12 )]
+[node name="Elevator" parent="." instance=ExtResource( 5 )]
 position = Vector2( -1184, 223.991 )
 
-[node name="Elevator2" parent="." instance=ExtResource( 12 )]
+[node name="Elevator2" parent="." instance=ExtResource( 5 )]
 position = Vector2( -1056, 224 )
 
-[node name="Elevator3" parent="." instance=ExtResource( 12 )]
+[node name="Elevator3" parent="." instance=ExtResource( 5 )]
 position = Vector2( -992, 2656 )
 
-[node name="Elevator4" parent="." instance=ExtResource( 12 )]
+[node name="Elevator4" parent="." instance=ExtResource( 5 )]
 position = Vector2( -864, 2656 )
 
-[node name="WhiteLight" parent="." instance=ExtResource( 4 )]
+[node name="WhiteLight" parent="." instance=ExtResource( 2 )]
 position = Vector2( 542.12, 153.881 )
 
-[node name="WhiteLight7" parent="." instance=ExtResource( 4 )]
+[node name="WhiteLight7" parent="." instance=ExtResource( 2 )]
 position = Vector2( -32.1089, 1567.2 )
 
-[node name="WhiteLight8" parent="." instance=ExtResource( 4 )]
+[node name="WhiteLight8" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1030.33, 2144.96 )
 
-[node name="WhiteLight5" parent="." instance=ExtResource( 4 )]
+[node name="WhiteLight5" parent="." instance=ExtResource( 2 )]
 position = Vector2( 510.336, 1062.9 )
 
-[node name="WhiteLight4" parent="." instance=ExtResource( 4 )]
+[node name="WhiteLight4" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1121.47, 150.692 )
 
-[node name="WhiteLight6" parent="." instance=ExtResource( 4 )]
+[node name="WhiteLight6" parent="." instance=ExtResource( 2 )]
 position = Vector2( -1098.47, 549.807 )
 
-[node name="WhiteLight2" parent="." instance=ExtResource( 4 )]
+[node name="WhiteLight2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 29.9131, 276.406 )
 
-[node name="WhiteLight3" parent="." instance=ExtResource( 4 )]
+[node name="WhiteLight3" parent="." instance=ExtResource( 2 )]
 position = Vector2( -605.314, 286.6 )
 
-[node name="Door2" parent="." instance=ExtResource( 11 )]
+[node name="Door2" parent="." instance=ExtResource( 7 )]
 position = Vector2( 576, 1498 )
 
 [node name="PistolBot" parent="." instance=ExtResource( 1 )]
@@ -556,7 +557,7 @@ __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Player" parent="." instance=ExtResource( 2 )]
+[node name="Player" parent="." instance=ExtResource( 6 )]
 position = Vector2( -1058.63, 223.991 )
 
 [node name="Camera2D2" type="Camera2D" parent="Player"]
@@ -566,36 +567,73 @@ current = true
 offset = Vector2( 30, 30 )
 transform = Transform2D( 1, 0, 0, 1, 30, 30 )
 
-[node name="PlayerHealthBar" parent="Player/CanvasLayer" instance=ExtResource( 7 )]
+[node name="PlayerHealthBar" parent="Player/CanvasLayer" instance=ExtResource( 8 )]
 scale = Vector2( 2, 2 )
 entity_path = NodePath("../..")
 
-[node name="CompanionHealthBar" parent="Player/CanvasLayer" instance=ExtResource( 7 )]
+[node name="CompanionHealthBar" parent="Player/CanvasLayer" instance=ExtResource( 8 )]
 position = Vector2( 0, 30 )
 scale = Vector2( 2, 2 )
 entity_path = NodePath("../../../Companion")
 
 [node name="BGM" type="AudioStreamPlayer2D" parent="Player"]
 position = Vector2( 1058.63, -223.991 )
-stream = ExtResource( 10 )
+stream = ExtResource( 3 )
 volume_db = -10.0
 autoplay = true
 
-[node name="Companion" parent="." instance=ExtResource( 3 )]
+[node name="Companion" parent="." instance=ExtResource( 9 )]
 position = Vector2( -1185.97, 223.991 )
-vision_range = 300
-max_distance_to_player = 100
 player_path = NodePath("../Player")
 
-[node name="ShotgunBot" parent="." instance=ExtResource( 5 )]
+[node name="ShotgunBot" parent="." instance=ExtResource( 10 )]
 position = Vector2( -960.635, 1720 )
 
-[node name="MGBot" parent="." instance=ExtResource( 9 )]
+[node name="MGBot" parent="." instance=ExtResource( 11 )]
 position = Vector2( 573.467, 1669.14 )
 patrol_path = NodePath("../Path2D2")
 
 [node name="Path2D2" type="Path2D" parent="."]
 curve = SubResource( 28 )
 
-[node name="Door" parent="." instance=ExtResource( 11 )]
+[node name="Door" parent="." instance=ExtResource( 7 )]
 position = Vector2( 576, 640 )
+
+[node name="Label" type="Label" parent="."]
+margin_left = -852.634
+margin_top = 137.317
+margin_right = -614.634
+margin_bottom = 194.317
+custom_fonts/font = ExtResource( 12 )
+text = "Use WASD or Arrow Keys to Move"
+align = 1
+autowrap = true
+
+[node name="WhiteLight9" parent="Label" instance=ExtResource( 2 )]
+position = Vector2( 124.514, 14.4644 )
+
+[node name="Label2" type="Label" parent="."]
+margin_left = -519.484
+margin_top = 91.3168
+margin_right = -281.484
+margin_bottom = 208.317
+custom_fonts/font = ExtResource( 12 )
+text = "You have an AI Companion that follows you and shoots at enemies"
+align = 1
+autowrap = true
+
+[node name="WhiteLight10" parent="Label2" instance=ExtResource( 2 )]
+position = Vector2( 119.494, 27.4742 )
+
+[node name="Label3" type="Label" parent="."]
+margin_left = -188.484
+margin_top = 91.3168
+margin_right = 49.5161
+margin_bottom = 208.317
+custom_fonts/font = ExtResource( 12 )
+text = "Your Character does not have a weapon, but he has a shield so protect your allie"
+align = 1
+autowrap = true
+
+[node name="WhiteLight10" parent="Label3" instance=ExtResource( 2 )]
+position = Vector2( 119.494, 27.4742 )

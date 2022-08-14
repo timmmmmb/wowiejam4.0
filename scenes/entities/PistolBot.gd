@@ -103,7 +103,7 @@ func _on_SearchTimer_timeout() -> void:
 
 func _on_PistolBot_died() -> void:
 	state = STATE.DEAD
-	$AnimatedSprite.animation = "hit"
+	#$AnimatedSprite.animation = "hit"
 	$HitBox.set_deferred("disabled", true)
 	$AnimatedSprite.play()
 	yield($AnimatedSprite, "animation_finished" )

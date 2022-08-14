@@ -51,7 +51,7 @@ _global_script_class_icons={
 [application]
 
 config/name="Wowiejam 4 . 0"
-run/main_scene="res://scenes/levels/TestLevel.tscn"
+run/main_scene="res://scenes/levels/Menu.tscn"
 config/icon="res://icon.png"
 
 [gdnative]

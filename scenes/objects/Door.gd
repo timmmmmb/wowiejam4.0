@@ -10,12 +10,10 @@ var open = false
 func _physics_process(_delta: float) -> void:
 	if is_character_in_sensor():
 		if not open:
-			print("open")
 			animation_player.play("open")
 			open = true
 	else:
 		if open:
-			print("close")
 			animation_player.play_backwards("open")
 			open = false
 
