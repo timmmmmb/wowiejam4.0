@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://scenes/weapons/StandardWeapon.tscn" type="PackedScene" id=1]
+[ext_resource path="res://scenes/weapons/ShotgunWeapon.gd" type="Script" id=2]
+[ext_resource path="res://scenes/projectiles/ShotgunBullet.tscn" type="PackedScene" id=3]
+
+[node name="ShotgunWeapon" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+Projectile = ExtResource( 3 )
+bullet_amount = 5
+bullet_delay = 0.05

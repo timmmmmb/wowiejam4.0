@@ -6,13 +6,12 @@ export var player_path: NodePath
 export var weapon_path: NodePath
 
 var player: Player
-var weapon: Weapon
 var enemies: Array
 
 
 func _ready() -> void:
 	player = get_node(player_path)
-	weapon = get_node(weapon_path)
+	current_weapon = get_node(weapon_path)
 	enemies = get_tree().get_nodes_in_group("Enemies")
 
 
@@ -64,6 +63,6 @@ func _on_Timer_timeout() -> void:
 	var nearest_enemy = get_nearest_enemy()
 	
 	if nearest_enemy and is_enemy_visible(nearest_enemy):
-		weapon.look_at(nearest_enemy.global_position)
-		weapon.rotate(PI / 2)
-		weapon.shoot()
+		current_weapon.look_at(nearest_enemy.global_position)
+		current_weapon.rotate(PI / 2)
+		current_weapon.shoot()

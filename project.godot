@@ -33,13 +33,19 @@ _global_script_classes=[ {
 "class": "Weapon",
 "language": "GDScript",
 "path": "res://scenes/weapons/StandardWeapon.gd"
+}, {
+"base": "Entity",
+"class": "base_enemy",
+"language": "GDScript",
+"path": "res://scenes/entities/PistolBot.gd"
 } ]
 _global_script_class_icons={
 "Bullet": "",
 "Entity": "",
 "HealthBar": "",
 "Player": "",
-"Weapon": ""
+"Weapon": "",
+"base_enemy": ""
 }
 
 [application]

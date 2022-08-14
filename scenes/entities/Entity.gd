@@ -47,5 +47,6 @@ func takeDamage(damage) -> void:
 
 
 func destroy():
-	current_weapon.disable_shooting = true
+	if current_weapon != null:
+		current_weapon.disable_shooting = true
 	emit_signal("died")

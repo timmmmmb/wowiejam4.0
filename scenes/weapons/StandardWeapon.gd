@@ -9,7 +9,7 @@ var disable_shooting = false
 func _ready() -> void:
 	$Delay.wait_time = delay
 
-	
+
 func shoot() -> void:
 	if !$Delay.is_stopped() or disable_shooting:
 		return

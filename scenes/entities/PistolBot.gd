@@ -1,4 +1,5 @@
 extends Entity
+class_name base_enemy
 export (NodePath) var weapon
 enum STATE {IDLE, PATROLLING, ATTACKING, DEAD, SEARCHING}
 var state = STATE.IDLE
@@ -20,7 +21,6 @@ func wake_up():
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
 	$AttackDelay.start(rng.randf_range(0,2)+attack_delay)
-	$AnimatedSprite.animation = "moving"
 	$AnimatedSprite.play()
 	if patrol_path:
 		patrol_points = get_node(patrol_path).curve.get_baked_points()

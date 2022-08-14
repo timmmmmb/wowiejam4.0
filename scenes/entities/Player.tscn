@@ -109,7 +109,7 @@ script = ExtResource( 1 )
 max_shield = 20.0
 shield_cooldown = 3.0
 shield_regeneration = 10.0
-speed = 200
+speed = 150
 
 [node name="AnimatedSprite" parent="." index="0"]
 frames = SubResource( 15 )
